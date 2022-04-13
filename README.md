@@ -1,8 +1,7 @@
-# Easy Multi
-Extremely easy multi/single instancing software for minecraft speedrunning.
+# Easy Multi Plus
+Extremely easy multi/single instancing software for minecraft speedrunning, updated to not kill your eyes by JimTheScientist.
 
-![image](https://user-images.githubusercontent.com/59705125/162879621-b017162e-702d-4477-80d1-3c20dc32833b.png)
-
+![img.png](img.png)
 A couple of goals of this project:
 - Setup multi in minutes
 - No file editing to adjust settings
@@ -59,5 +58,17 @@ Thanks to all the following individuals and teams for their projects which helpe
 - [btsdev's Global Hotkeys module](https://github.com/btsdev/global_hotkeys)
 - [boppreh's keyboard module](https://github.com/boppreh/keyboard)
 - [terryyin's clipboard module](https://github.com/terryyin/clipboard)
+- [rdbende's sun valley theme](https://github.com/rdbende/Sun-Valley-ttk-theme)
 - The incredible amount of contributors of [pywin32](https://github.com/mhammond/pywin32)
 - Those who worked on Python, and the default Python modules.
+
+## Development
+
+1. Install the above libraries.
+
+2. Add the contents of "theme" from rdbende's theme above to the theme folder located in this project
+
+The below works as long as long as you place the theme folder with the final output:
+(Tkinter will load .tcl files normally instead of in the temp directory that is used by the .exe for built-in files)
+
+```pyinstaller --noconfirm --onefile --windowed --icon "EasyMulti.ico" --add-data "EasyMulti.ico;." --add-data "theme;theme/"  "EasyMulti.pyw" --distpath "output/" --add-data="theme;theme"```
