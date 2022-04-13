@@ -2,6 +2,7 @@
 Extremely easy multi/single instancing software for minecraft speedrunning, updated to not kill your eyes by JimTheScientist.
 
 ![img.png](img.png)
+
 A couple of goals of this project:
 - Setup multi in minutes
 - No file editing to adjust settings
